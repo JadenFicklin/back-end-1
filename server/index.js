@@ -11,9 +11,9 @@ app.get("/api/users", (req, res) => {
   res.status(200).send(friends);
 });
 
-app.get("/weather/:temperature", (req, res) => {
-  const phrase = `<h3>It was ${req.params.temperature} today</h3>`;
-  res.status(200).send(phrase);
+app.get("/api/foods", (req, res) => {
+  let foods = ["food 1", "food 2", "food 3", "food 4", "food 5"];
+  res.status(200).send(foods);
 });
 
 app.listen(4000, () => console.log("Server running on port 4000"));
